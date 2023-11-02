@@ -194,7 +194,6 @@ class MainWindow(QDialog):
         sql = str(self.lineEdit_requete_sql.text())
         titre = str(self.lineEdit_titre.text())
         print("lancement de diffunews_cli")
-#        creation(sourcefile,destinationfile,sql,titre)
         creation(sourcefile, destinationfile, sqllocation, sqloriginality, sqltargetaudience, titre)
 
 
@@ -221,7 +220,7 @@ class MainWindow(QDialog):
         datatargetaudience = s
         print("datalocation = " + datalocation)
         print("dataoriginality = " + dataoriginality)
-        cur.execute("SELECT count(myoid) FROM book WHERE target_audience = ?", (datatargetaudience,))
+        cur.execute("SELECT count(*) FROM book WHERE target_audience = ?", (datatargetaudience,))
 #        cur.execute("SELECT count(title) FROM (SELECT title FROM book WHERE location = ? AND originality = ? INTERSECT SELECT title FROM book WHERE target_audience = ?", (datalocation, dataoriginality,datatargetaudience,))
 #        cur.execute("SELECT count(myoid) FROM book WHERE target_audience = ? INTERSECT SELECT count(myoid) FROM book WHERE location = ? AND originality = ?", (datatargetaudience,datalocation, dataoriginality,))
         nbretotalbook = cur.fetchone()[0]

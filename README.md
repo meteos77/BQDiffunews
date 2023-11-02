@@ -42,9 +42,10 @@ exemple :
  permet de regrouper les pdf (102; 103; ...) pour ne former qu'un seul fichier newletter.pdf
 
 ------------------------------------------------------------
-### EN COURS :
+### EN COURS TO-DO:
 - [ ] automatiser la création d'un seul document.
 - [ ] créer interface gui.
+- [ ] pb si document en nombre impaire.
 ------------------------------------------------------------
 ##Installation testé sur LinuxMint21.2
 
