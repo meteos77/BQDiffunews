@@ -96,18 +96,28 @@ def creation(sourcefile, destinationpath, sqllocation, sqloriginality, sqltarget
     cursor.close
     connection.close()
 
+def messageusage():
+    print("---------------------------------------------------------------------------------------------------------------------------------------------------------------------")
+    print("diffunews version 2023-11-02")
+    print("Pour utiliser l'outil diffunews, vous devez remplir les 6 arguments")
+    print("usage : ./diffunews_cli.py databse.sqlite(1) \"destinationpath\"(2) \"location_field\"(3) \"originality_field\"(4) \"target_audience_field\"(5) \"title page pdf\"(6)")
+    print("Argument 1 : fichier source -> une base BiblioteQ .sqlite.")
+    print("Argument 2 : le répertoire de travail de diffunews.")
+    print("Argument 3 : l'emplacement des documents dans la base BiblioteQ (champ location).")
+    print("Argument 4 : l'origine des documents dans la base BiblioteQ (champ originality).")
+    print("Argument 5 : le public cible dans la base BiblioteQ (champ target_audience).")
+    print("Argument 6 : le titre des pages générées par diffunews.")
+    print("exemple :")
+    print("./diffunews_cli.py Exemples/test.sqlite \"/home/user/Bureau\" \"R-Romans\" \"DONS-2023\" \"Adultes\" \"Romans : Nouveautés Octobre 2023\"")
 
 if __name__ == "__main__":
-
-    print("Paramètre 1 : source le fichier sqlite du logiciel BibloteQ")
-    print("Rappel : mettre en source le fichier sqlite du logiciel BibloteQ")
-    print("Rappel : mettre en destination le chemin d'enregistrement des fichiers pdf")
-    print("Rappel : mettre en emplacement : permet de filtrer la requete SQL avec la clause WHERElocation \"parametre\"")
-    print("Rappel : titre")
-    sourcefile = (sys.argv[1])
-    destinationpath = (sys.argv[2])
-    sqllocation = (sys.argv[3])
-    sqloriginality = (sys.argv[4])
-    sqltargetaudience = (sys.argv[5])
-    title = (sys.argv[6])
-    creation(sourcefile, destinationpath, sqllocation, sqloriginality, sqltargetaudience, title)
+    try:
+        sourcefile = (sys.argv[1])
+        destinationpath = (sys.argv[2])
+        sqllocation = (sys.argv[3])
+        sqloriginality = (sys.argv[4])
+        sqltargetaudience = (sys.argv[5])
+        title = (sys.argv[6])
+        creation(sourcefile, destinationpath, sqllocation, sqloriginality, sqltargetaudience, title)
+    except:
+        messageusage()
