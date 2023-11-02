@@ -64,6 +64,10 @@ pour le moment :
 ------------------------------------------------------------
 
 ------------------------------------------------------------
+## Exemple de résultat :
+![Texte alternatif](Exemples/exemple.png)
 
+
+[Exemple de résultat en pdf](Exemples/newletter.pdf)
 
 
