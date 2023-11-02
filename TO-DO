@@ -1,0 +1,6 @@
+TO-DO
+version CLI
+- diffunews_creation_newletter.py a mettre en fonction pour n'avoir qu'un seul script.
+
+version GUI EN COURS
+- ajouter à la liste des combobox un item "deactivant le champ"

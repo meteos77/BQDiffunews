@@ -1,0 +1,9 @@
+Architecture: amd64
+Depends:
+Maintainer: meteos77
+Package: BQDiffunews
+Priority: optional
+Section: Database
+Version: 1.1.0
+Description: crée une newletter a partir d'une base BilbioteQ.
+ Bienvenue dans BQDiffunews
