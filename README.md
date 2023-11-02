@@ -36,24 +36,24 @@ Pour créer la newletter, l'outil a besoin que les champs des documents soient r
 exemple :
 ./diffunews_cli.py Exemples/test.sqlite "/home/user/Bureau" "R-Romans" "DONS-2023" "Adultes" "Romans : Nouveautés Octobre 2023"
 
-
-
-
-## EVOLUTION EN COURS : (le but : automatiser la création d'un seul document)
-pour le moment :
-
 1 - il créer des images 102.pdf 103.pdf ...
 
 2 - le script **diffunews_creation_newletter.py**
  permet de regrouper les pdf (102; 103; ...) pour ne former qu'un seul fichier newletter.pdf
 
-
-
+------------------------------------------------------------
+### EN COURS :
+- [ ] automatiser la création d'un seul document.
+- [ ] créer interface gui.
 ------------------------------------------------------------
 ##Installation testé sur LinuxMint21.2
 
 * ### paquets .deb à installer avec qpt-get
-    * -python3.12
+    * python3.12
+        * base64
+        * os
+        * sqlite3
+        * sys
 
 * ### modules python à installer
     * pip install fpdf2
